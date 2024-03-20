@@ -12,3 +12,7 @@
 
 
 # what is root in React ?
+### -> In react the root element refers to the top level element  that is parent of all other components in your application .It is Typically represented as a DOM node within the Public/index.
+
+# JSX
+###  JSX is converted/Transpiled to ReactElement i.e(JS Object) and then rendred as HTML tags. This conversion is done by the Bable used by the parcel available in node_module. 
