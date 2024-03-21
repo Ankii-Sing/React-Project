@@ -91,3 +91,22 @@ The shorter syntax, <></>, is a newer way to create fragments. It was introduced
 # What is `Reconciliation` in React?
 React uses a virtual DOM to keep track of the state of the UI. When a component's state changes, React updates the virtual DOM. Then, it compares the virtual DOM to the real DOM and updates the real DOM only when necessary. This process is called reconciliation.
 Reconciliation is an important part of React because it makes the UI updates very efficient. Without reconciliation, React would have to re-render the entire UI every time a component's state changes. This would be very slow and would make the UI unresponsive.
+
+# What is `React Fiber`?
+React fiber is a complete rewrite of react that fixes a few long-standing issues and offers incredible and offers opportunities heading into the future. Goals of React Fiber: Fiber focuses on animations and responsiveness. It has the ability to split work into chunks and prioritize tasks.
+
+ ## Reconciliation versus rendering
+ The DOM is just one of the rendering environments React can render to, the other major targets being native iOS and Android views via React Native. (This is why "virtual DOM" is a bit of a misnomer.)
+
+ The reason it can support so many targets is because React is designed so that reconciliation and rendering are separate phases. The reconciler does the work of computing which parts of a tree have changed; the renderer then uses that information to actually update the rendered app.
+
+ This separation means that React DOM and React Native can use their own renderers while sharing the same reconciler, provided by React core.
+
+ Fiber reimplements the reconciler. It is not principally concerned with rendering, though renderers will need to change to support (and take advantage of) the new architecture.
+
+ ## Scheduling
+ 
+  ### scheduling
+ the process of determining when work should be performed.
+  ### work
+ any computations that must be performed. Work is usually the result of an update (e.g. setState).
