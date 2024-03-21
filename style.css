@@ -28,7 +28,8 @@
 .res-card{
     width: 200px;
     padding: 5px;
-    margin: 5px;
+    /* margin: 5px; */
+    flex-wrap: wrap;
 }
 
 .res-card:hover{
@@ -38,6 +39,11 @@
 
 .res-logo{
     width: 100%;
+}
 
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 

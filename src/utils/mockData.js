@@ -1,31 +1,3 @@
-import React from "react"
-import ReactDOM from "react-dom"
-
-// restureant card
-const ResturantCard = (data) =>{
-    // destructuring
-    const {resData} = data
-    // optional chaining
-
-    const { name ,costForTwo , cuisines, avgRating,cloudinaryImageId} = resData?.info
-
-    return (
-        <div className="res-card" >
-            <img className="res-logo"
-             alt="res-logo"
-             src={
-                "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
-              + cloudinaryImageId 
-              }/>
-            <h3>{name}</h3>
-            <h3>{costForTwo}</h3>
-            <h3>{cuisines}</h3>
-            <h3>{avgRating}Stars</h3>
-            <h3>{resData.info.sla.deliveryTime}mins</h3>
-        </div>
-    )
-}
-
 const foodObj = [ 
     {
       "info": {
@@ -35,13 +7,7 @@ const foodObj = [
         "locality": "Pathways School Road",
         "areaName": "Hajipur",
         "costForTwo": "₹300 for two",
-        "cuisines": [
-          "Pizzas",
-          "Pastas",
-          "Italian",
-          "Desserts",
-          "Beverages"
-        ],
+        "cuisines": ["Pizzas","Pastas","Italian","Desserts","Beverages"],
         "avgRating": 4,
         "parentId": "4961",
         "avgRatingString": "4.0",
@@ -644,52 +610,4 @@ const foodObj = [
       }
     }]
 
-
-// creating body
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search"> Search-Bar</div>
-            <div className="res-container">
-                {
-                   foodObj.map((restraunt) => <ResturantCard resData = {restraunt}/>)
-                }
-                
-            </div>
-        </div>
-    )
-}
-
-// creating Header
-const Header = () =>{
-    return (
-        <div className="header">
-            <div id="logo-container">
-                <img className="logo" src="https://www.creativefabrica.com/wp-content/uploads/2022/03/07/Restaurant-yummy-food-logo-design-Graphics-26620420-2-580x387.png"></img>
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-
-            </div>
-        </div>
-    )
-}
-
-
-// creation app Layout
-const Applayout = () => {
-    return (
-        <div className="app">
-            <Header/>
-            <Body/>
-
-        </div>
-    )
-}
-const root = ReactDOM.createRoot(document.getElementById("steam"))
-root.render(<Applayout/>)
+    export default foodObj;
