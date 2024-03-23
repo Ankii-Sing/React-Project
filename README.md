@@ -110,3 +110,15 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
  the process of determining when work should be performed.
   ### work
  any computations that must be performed. Work is usually the result of an update (e.g. setState).
+
+ # when 'useEffect ' is called ?
+    - // when no dependency array is there , use effect is called every time the component renders.
+    - // when empty dependecny is there .. use effect is called only once , when the component loads.
+    - // when we pass any dependency the use effect is called whenever the dependency changes.
+
+
+    // <Link 
+                    // key = { restraunt.info.id} 
+                    // to = {"/resturant/" + restraunt.info.id }>
+                   <ResturantCard key = { restraunt.info.id}  resData = {restraunt}/>
+                //    </Link>
