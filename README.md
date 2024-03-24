@@ -122,3 +122,10 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
                     // to = {"/resturant/" + restraunt.info.id }>
                    <ResturantCard key = { restraunt.info.id}  resData = {restraunt}/>
                 //    </Link>
+
+# why do we use super(props) in constructor ?
+
+- The super(props) function is used in the constructor of a React component to call the constructor of the parent component. This is necessary because React components are subclasses of the React.Component class, and the constructor of the parent component must be called in order to initialize the component properly.
+- In addition to calling the constructor of the parent component, the super(props) function also passes the props object to the parent component. This allows the parent component to access the props object and use it to initialize its own state.
+- The super(props) function is an important part of React components. It allows components to inherit the properties and methods of their parent components, and it also allows components to access the props object.
+- By using super(props), we ensure that the constructor props are correctly passed to the parent constructor, allowing us to access this. props inside the constructor and other methods of the React class component.
