@@ -1,12 +1,17 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import ReactDOM from "react-dom/client"
 import Header from "./components/Header"    // importing header
 import Body from "./components/Body"
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
-import About from "./components/About"
+// import About from "./components/About"
 import Contact from "./components/Contact"
 import Error from "./components/Error"
 import Resturant from "./components/Resturant"
+import Shimmer from "./components/Shimmer"
+
+
+// implementing lazy loading in about sectoin
+const About = lazy( () => import("./components/About"))
  
 // creation app Layout
 const Applayout = () => {
@@ -31,7 +36,7 @@ const appRouter = createBrowserRouter( [
         },
             {
             path : "/about",
-            element : <About/>
+            element : <Suspense fallback = { <Shimmer/> }>  <About/></Suspense>  
         },
         {
             path : "/contact",
