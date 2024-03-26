@@ -44,14 +44,15 @@ const Body = () => {
 
     return (
         <div className="body">      
-            <div className="filter">
-                <div className="Search">
-                    <input type="text" className="Search-box"
+            <div className="flex p-4 m-4">
+                <div className=" px-2 border border-solid border-blue-200 rounded-xl">
+                    <input type="text"  className =" border border-gray-800"
                      value = {SearchText}
                      onChange={ 
                         (e) => {setSearchText(e.target.value);}} >
-                        </input>
-                    <button className="Search-btn"  
+                    </input>
+
+                    <button className=" m-4 px-4 bg-blue-200 rounded-md border-solid border-blue-500"  
                       
                       onClick={ () => {
                         console.log(SearchText)
@@ -66,7 +67,7 @@ const Body = () => {
                 </div>
 
 
-                <button className="filter-btn"
+                <button className="filter-btn m-4 px-4 rounded-md bg-pink-100"
                     onClick = { () => {
                     const filteredList =  listofResturants?.filter(
                     (res) => res.info.avgRating > 4);
@@ -76,7 +77,7 @@ const Body = () => {
                 </button>
             </div>
 
-            <div className="res-container">
+            <div className="res-container flex flex-wrap">
                 {
                    filteredResturants?.map((restraunt) => 
                    (<Link key = { restraunt.info.id} 
