@@ -13,7 +13,7 @@ const Body = () => {
 
     const [SearchText , setSearchText] = useState("");
     
-    console.log("print");
+    // console.log("print");
 
     // use useeffect
     useEffect( () => {
@@ -28,7 +28,7 @@ const Body = () => {
         // const temp = await json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setlistofResturants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilteredResturants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
     if(useOnlineStatus() === "false")
