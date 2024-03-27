@@ -77,7 +77,7 @@ const Body = () => {
                 </button>
             </div>
 
-            <div className="res-container flex flex-wrap">
+            <div className="mx-5 place-self-center res-container flex flex-wrap">
                 {
                    filteredResturants?.map((restraunt) => 
                    (<Link key = { restraunt.info.id} 

@@ -43,8 +43,11 @@ const Resturant = () => {
     const recommendedCategory = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
         c => c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
-    console.log(categories);
+    //     console.log(categories);
     // console.log(recommendedCategory);
+    // const Alldata = categories.concat(recommendedCategory);
+
+    // console.log(Alldata);
 
     return (
         <div className="text-center">
@@ -69,7 +72,7 @@ const Resturant = () => {
 
              <p> 
                 {categories.map((category)=>(
-                    <ResturantCategory data = {category?.card?.card }/>)
+                    <ResturantCategory key={category.card.card.title } data = {category?.card?.card }/>)
                 )}
              </p>
 

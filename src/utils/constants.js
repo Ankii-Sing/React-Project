@@ -4,7 +4,6 @@ export const LOGO_URL = "https://www.creativefabrica.com/wp-content/uploads/2022
 
 export const MENU_API = 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5735&lng=77.3208&restaurantId=';
 
-// export const DISH_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/"
 
 
 
