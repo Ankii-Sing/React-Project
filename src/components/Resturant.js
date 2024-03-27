@@ -9,6 +9,8 @@ const Resturant = () => {
 
     const [resInfo , setresInfo] = useState(null);
 
+    const [showItems ,setshowItems] = useState(0)
+
     useEffect( ()=>{
         fetchMenu();
     } ,[])
@@ -49,6 +51,8 @@ const Resturant = () => {
 
     // console.log(Alldata);
 
+    
+
     return (
         <div className="text-center">
              <h1 className="my-3 font-bold text-2xl ">{name}</h1>
@@ -71,8 +75,13 @@ const Resturant = () => {
              </ul> */}
 
              <p> 
-                {categories.map((category)=>(
-                    <ResturantCategory key={category.card.card.title } data = {category?.card?.card }/>)
+                {categories.map((category,index)=>(
+                    <ResturantCategory key={category.card.card.title }
+                     data = {category?.card?.card }
+                     showItems = {index === showItems ? true : false}
+                     setshowItems = {() => setshowItems(index)}
+
+                     />)
                 )}
              </p>
 

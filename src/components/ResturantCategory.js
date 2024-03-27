@@ -1,11 +1,11 @@
 import { useState } from "react";
 import ItemCard from "./Itemscard";
 
-const ResturantCategory = ({data}) => {
+const ResturantCategory = ({data,showItems,setshowItems}) => {
 
-    const [showItems ,setshowItems] = useState(false)
+    
     const handleClick = () => {
-        setshowItems(!showItems);
+        setshowItems();
     };
 
     return (

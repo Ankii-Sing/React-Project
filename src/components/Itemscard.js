@@ -13,7 +13,7 @@ const ItemCard = ({item}) =>{
             {/* <div>{title}</div> */}
             {item.map( (i) => (
                     <div  key={i.title}  className="p-4 m-4 ">
-                        <p  onClick={showDishes} className="font-semibold text-lg border-gray-400 border-b-2 text-left">{i.title} {" "} ({item.length})</p>
+                        <p  onClick={showDishes} className="cursor-pointer font-semibold text-lg border-gray-400 border-b-2 text-left">{i.title} {" "} ({item.length})</p>
                         {showfood && <Dishes dish={i.itemCards}/>}
                     </div>
                 )

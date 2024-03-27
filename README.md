@@ -112,16 +112,10 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
  any computations that must be performed. Work is usually the result of an update (e.g. setState).
 
  # when 'useEffect ' is called ?
-    - // when no dependency array is there , use effect is called every time the component renders.
-    - // when empty dependecny is there .. use effect is called only once , when the component loads.
-    - // when we pass any dependency the use effect is called whenever the dependency changes.
+    - when no dependency array is there , use effect is called every time the component renders.
+    - when empty dependecny is there .. use effect is called only once , when the component loads.
+    - when we pass any dependency the use effect is called whenever the dependency changes.
 
-
-    // <Link 
-                    // key = { restraunt.info.id} 
-                    // to = {"/resturant/" + restraunt.info.id }>
-                   <ResturantCard key = { restraunt.info.id}  resData = {restraunt}/>
-                //    </Link>
 
 # why do we use super(props) in constructor ?
 
@@ -129,3 +123,35 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
 - In addition to calling the constructor of the parent component, the super(props) function also passes the props object to the parent component. This allows the parent component to access the props object and use it to initialize its own state.
 - The super(props) function is an important part of React components. It allows components to inherit the properties and methods of their parent components, and it also allows components to access the props object.
 - By using super(props), we ensure that the constructor props are correctly passed to the parent constructor, allowing us to access this. props inside the constructor and other methods of the React class component.
+
+
+<!-- Lifting state UP feature in react. -->
+
+
+# What is Prop Drilling ?
+
+- Prop drilling is a fundamental concept in React that involves passing data down through nested components in a React application. It plays a crucial role in maintaining communication between parent and child components within the component tree.
+- However, excessive prop drilling can lead to several challenges, including:
+ ### Increased cognitive load:
+ - Prop drilling can make it difficult for developers to keep track of which components are passing which data and where that data is being used. This can be especially challenging in large and complex applications.
+### Code redundancy:
+ - Prop drilling can lead to code redundancy, as the same data may be passed down through multiple levels of components. This can make the code more difficult to maintain and update.
+### Performance overhead:
+- In some cases, prop drilling can lead to performance overhead, as React needs to re-render components whenever their props change.
+## To avoid prop drilling, there are a few techniques that developers can use:
+### Context API:
+- The Context API provides a way to share data between components without having to pass it down through props. This can be useful for sharing data that is needed by many components throughout the application.
+### State management libraries:
+ - State management libraries, such as Redux and MobX, provide a centralized way to manage application state. This can help to reduce prop drilling by making data available to all components that need it, regardless of their location in the component tree.
+### Render props:
+ - Render props is a technique that allows developers to pass a function to a child component that will be responsible for rendering the child component's output. This can be useful for passing data to child components without having to use props.
+ - By using these techniques, developers can avoid prop drilling and create React applications that are more maintainable, performant, and easier to understand.
+## Here are some additional tips for avoiding prop drilling:
+  ### Identify the data that needs to be shared:
+  - The first step is to identify the data that needs to be shared between components. Once you have identified the data, you can determine the best way to share it.
+  ### Use the Context API for global data:
+  - If the data needs to be shared by many components throughout the application, you can use the Context API. The Context API provides a way to share data without having to pass it down through props.
+### Use state management libraries for complex data:
+- If the data is complex or needs to be updated frequently, you can use a state management library, such as Redux or MobX. State management libraries provide a centralized way to manage application state, which can help to reduce prop drilling.
+### Use render props for custom rendering logic:
+- If you need to pass data to a child component and you also need to control how the child component is rendered, you can use render props. Render props allows you to pass a function to a child component that will be responsible for rendering the child component's output.
