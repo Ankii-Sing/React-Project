@@ -155,3 +155,6 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
 - If the data is complex or needs to be updated frequently, you can use a state management library, such as Redux or MobX. State management libraries provide a centralized way to manage application state, which can help to reduce prop drilling.
 ### Use render props for custom rendering logic:
 - If you need to pass data to a child component and you also need to control how the child component is rendered, you can use render props. Render props allows you to pass a function to a child component that will be responsible for rendering the child component's output.
+
+ # Preview
+![Home page](https://github.com/Ankii-Sing/React-Project/assets/100915008/1398fa9e-423b-4fdf-9dac-bd63f0fbd052)
