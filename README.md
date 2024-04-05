@@ -158,3 +158,30 @@ React fiber is a complete rewrite of react that fixes a few long-standing issues
 
  # Preview
 ![Home page](https://github.com/Ankii-Sing/React-Project/assets/100915008/1398fa9e-423b-4fdf-9dac-bd63f0fbd052)
+
+
+## 🔥 Clone this Repository
+
+You need to write the following commands on the terminal screen(in vscode) so that you can run this project locally.
+
+```bash
+  git clone "https://github.com/Ankii-Sing/React-Project.git"
+```
+
+Go to the project directory
+
+```bash
+  cd React-Project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
